@@ -3,6 +3,10 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,7 +21,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Grass" translatesAutoresizingMaskIntoConstraints="NO" id="O6D-Sc-21d">
+                                <frame key="frameInset" minX="-4" minY="428" width="383" height="239"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="O6D-Sc-21d" secondAttribute="height" multiplier="8:5" id="Gks-xX-P62"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Sun" translatesAutoresizingMaskIntoConstraints="NO" id="Ou4-7H-P9B">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ou4-7H-P9B" secondAttribute="height" multiplier="1:1" id="0ks-qn-RXA"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="SmallTree" translatesAutoresizingMaskIntoConstraints="NO" id="ERp-7P-Lbw">
+                                <frame key="frameInset" minX="16" minY="383" width="119" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ERp-7P-Lbw" secondAttribute="height" multiplier="139:230" id="GmG-o2-WiY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Clouds" translatesAutoresizingMaskIntoConstraints="NO" id="c7B-9q-79U">
+                                <frame key="frameInset" minX="17" minY="3" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="KidsPlaying" translatesAutoresizingMaskIntoConstraints="NO" id="sgh-3G-sHX">
+                                <frame key="frameInset" minX="128" minY="428" width="231" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sgh-3G-sHX" secondAttribute="height" multiplier="2:1" id="qdP-Qh-I9q"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.60332628909999997" green="0.65530478960000005" blue="0.81491315360000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="sgh-3G-sHX" firstAttribute="bottom" secondItem="O6D-Sc-21d" secondAttribute="centerY" constant="-24" id="0R0-I4-y3W"/>
+                            <constraint firstItem="Ou4-7H-P9B" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="1qe-jv-TYx"/>
+                            <constraint firstItem="O6D-Sc-21d" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="2cN-Xg-ikD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sgh-3G-sHX" secondAttribute="trailing" id="3lJ-Uj-cKU"/>
+                            <constraint firstItem="ERp-7P-Lbw" firstAttribute="bottom" secondItem="O6D-Sc-21d" secondAttribute="top" multiplier="1.25" id="4IW-pr-ABl"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="ERp-7P-Lbw" secondAttribute="leading" id="Fd0-3n-wDo"/>
+                            <constraint firstItem="ERp-7P-Lbw" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="3:10" id="RIy-R5-eFh"/>
+                            <constraint firstItem="O6D-Sc-21d" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="RoJ-P1-StL"/>
+                            <constraint firstItem="sgh-3G-sHX" firstAttribute="leading" secondItem="O6D-Sc-21d" secondAttribute="trailing" constant="-251" id="esu-mh-HPG"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="O6D-Sc-21d" secondAttribute="bottom" id="k5F-MA-Jcp"/>
+                            <constraint firstItem="Ou4-7H-P9B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="1:4" id="lbe-cB-C75"/>
+                            <constraint firstItem="Ou4-7H-P9B" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="mVC-bI-kzG"/>
+                            <constraint firstItem="O6D-Sc-21d" firstAttribute="bottom" secondItem="sgh-3G-sHX" secondAttribute="bottom" constant="-19" id="pHM-9j-dWF"/>
+                            <constraint firstItem="O6D-Sc-21d" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:4" id="yIZ-yP-sVM"/>
+                            <constraint firstItem="sgh-3G-sHX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:4" id="yhf-vS-FWe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -25,4 +75,11 @@
             <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Clouds" width="3109" height="1696"/>
+        <image name="Grass" width="1280" height="800"/>
+        <image name="KidsPlaying" width="2285" height="1826"/>
+        <image name="SmallTree" width="1390" height="2300"/>
+        <image name="Sun" width="432" height="432"/>
+    </resources>
 </document>
